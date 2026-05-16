@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triumph 凯旋复古摩托车</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        triumph: {
+                            gold: '#D4AF37',
+                            brown: '#3D2B1F',
+                            cream: '#F5F0E1',
+                            dark: '#1A1A1A',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        *{scroll-behavior: smooth;}
+        .text-shadow{text-shadow: 2px 2px 6px #000;}
+        .hover-scale{transition: 0.3s ease;}
+        .hover-scale:hover{transform: scale(1.02);}
+    </style>
+</head>
+<body class="bg-triumph-dark text-triumph-cream">
+    <!-- 导航栏 -->
+    <header class="fixed w-full top-0 z-50 bg-black/80 border-b border-amber-600/40">
+        <div class="container mx-auto px-5 py-3 flex justify-between items-center">
+            <h2 class="text-2xl text-triumph-gold font-serif font-bold">TRIUMPH</h2>
+            <nav class="hidden md:flex gap-7">
+                <a href="#home" class="hover:text-triumph-gold">首页</a>
+                <a href="#car" class="hover:text-triumph-gold">车型展示</a>
+                <a href="#about" class="hover:text-triumph-gold">品牌介绍</a>
+                <a href="#detail" class="hover:text-triumph-gold">机车细节</a>
+                <a href="#comment" class="hover:text-triumph-gold">车友评价</a>
+            </nav>
+            <i class="fa-solid fa-bars text-xl text-triumph-gold md:hidden"></i>
+        </div>
+    </header>
+
+    <!-- 首页横幅 本地图片 -->
+    <section id="home" class="w-full h-screen flex items-center justify-center" style="background: url(images/banner.jpg) center/cover no-repeat;">
+        <div class="absolute inset-0 bg-black/60"></div>
+        <div class="relative z-10 text-center px-4">
+            <h1 class="text-[clamp(2rem,5vw,4rem)] text-triumph-gold font-serif font-bold text-shadow">英伦复古 凯旋机车</h1>
+            <p class="mt-4 text-lg max-w-2xl mx-auto">百年英伦匠心，复刻经典复古美学，驰骋自由之路</p>
+            <div class="mt-8 flex justify-center gap-4 flex-wrap">
+                <a href="#car" class="px-7 py-3 bg-triumph-gold text-triumph-dark font-bold rounded">查看车型</a>
+                <a href="#about" class="px-7 py-3 border-2 border-triumph-gold text-triumph-gold rounded">了解品牌</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 车型展示 -->
+    <section id="car" class="py-20 bg-triumph-brown/20">
+        <div class="container mx-auto px-5">
+            <div class="text-center mb-14">
+                <h2 class="text-4xl text-triumph-gold font-serif font-bold">经典复古车型</h2>
+                <p class="mt-3 text-gray-300">每一台凯旋，都是复古潮流的代表</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- T120 -->
+                <div class="bg-gray-900 border border-amber-700/30 rounded overflow-hidden hover-scale">
+                    <img src="images/t120 (2).jpg" alt="凯旋T120" class="w-full h-56 object-cover">
+                    <div class="p-5">
+                        <h3 class="text-xl text-triumph-gold font-bold">Bonneville T120</h3>
+                        <p class="text-gray-400 mt-2">1200cc双缸复古街车，经典英伦造型，骑行舒适稳重</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="text-triumph-gold">排量：1200CC</span>
+                            <a href="#" class="text-white hover:text-triumph-gold">详情 <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 攀爬者 -->
+                <div class="bg-gray-900 border border-amber-700/30 rounded overflow-hidden hover-scale">
+                    <img src="images/scrambler.jpg" alt="凯旋攀爬者" class="w-full h-56 object-cover">
+                    <div class="p-5">
+                        <h3 class="text-xl text-triumph-gold font-bold">Scrambler 攀爬者</h3>
+                        <p class="text-gray-400 mt-2">复古越野风格，高排气设计，城市山路全能骑行</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="text-triumph-gold">排量：1200CC</span>
+                            <a href="#" class="text-white hover:text-triumph-gold">详情 <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 极速双子 -->
+                <div class="bg-gray-900 border border-amber-700/30 rounded overflow-hidden hover-scale">
+                    <img src="images/speedtwin.jpg" alt="凯旋极速双子" class="w-full h-56 object-cover">
+                    <div class="p-5">
+                        <h3 class="text-xl text-triumph-gold font-bold">Speed Twin 900</h3>
+                        <p class="text-gray-400 mt-2">轻量化复古街车，操控灵活，日常代步首选车型</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="text-triumph-gold">排量：900CC</span>
+                            <a href="#" class="text-white hover:text-triumph-gold">详情 <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 品牌介绍 -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-5">
+            <div class="flex flex-col lg:flex-row items-center gap-10">
+                <div class="lg:w-1/2">
+                    <img src="images/about.jpg" alt="凯旋品牌" class="w-full rounded border-2 border-triumph-gold/40 hover-scale">
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl text-triumph-gold font-serif font-bold">百年凯旋 · 英伦传奇</h2>
+                    <p class="mt-5 text-gray-300 leading-relaxed">
+                        凯旋Triumph创立于1885年英国，是世界顶级复古摩托车制造品牌。历经百年岁月沉淀，坚持传统手工工艺搭配现代动力技术，打造极具辨识度的复古机车。
+                    </p>
+                    <p class="mt-4 text-gray-300 leading-relaxed">
+                        从经典街车到越野攀爬，凯旋覆盖全品类复古车型，凭借浑厚声浪、精致做工与优雅外观，成为全球复古机车爱好者心中的首选品牌。
+                    </p>
+                    <div class="mt-8 flex gap-6">
+                        <div class="text-center">
+                            <div class="text-3xl text-triumph-gold font-bold">140+</div>
+                            <div class="text-sm text-gray-400">品牌年限</div>
+                        </div>
+                        <div class="text-center border-x border-amber-600/30 px-6">
+                            <div class="text-3xl text-triumph-gold font-bold">60+</div>
+                            <div class="text-sm text-gray-400">热销国家</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl text-triumph-gold font-bold">100%</div>
+                            <div class="text-sm text-gray-400">纯正英伦设计</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 机车细节 -->
+    <section id="detail" class="py-20 bg-triumph-brown/30">
+        <div class="container mx-auto px-5">
+            <div class="text-center mb-14">
+                <h2 class="text-4xl text-triumph-gold font-serif font-bold">匠心细节</h2>
+                <p class="mt-3 text-gray-300">精细打磨每一处机械质感</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="text-center hover-scale">
+                    <img src="images/engine.jpg" class="w-full h-44 object-cover rounded mb-3">
+                    <h4 class="text-lg text-triumph-gold">双缸动力引擎</h4>
+                    <p class="text-gray-400 text-sm">动力充沛 声浪浑厚</p>
+                </div>
+                <div class="text-center hover-scale">
+                    <img src="images/tank.jpg" class="w-full h-44 object-cover rounded mb-3">
+                    <h4 class="text-lg text-triumph-gold">复古烤漆油箱</h4>
+                    <p class="text-gray-400 text-sm">漆面细腻 质感高级</p>
+                </div>
+                <div class="text-center hover-scale">
+                    <img src="images/seat.jpg" class="w-full h-44 object-cover rounded mb-3">
+                    <h4 class="text-lg text-triumph-gold">复古皮质坐垫</h4>
+                    <p class="text-gray-400 text-sm">久坐舒适 复古格调</p>
+                </div>
+                <div class="text-center hover-scale">
+                    <img src="images/gauge.jpg" class="w-full h-44 object-cover rounded mb-3">
+                    <h4 class="text-lg text-triumph-gold">经典机械仪表</h4>
+                    <p class="text-gray-400 text-sm">复古指针 简洁大气</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 车友评价 -->
+    <section id="comment" class="py-20">
+        <div class="container mx-auto px-5">
+            <div class="text-center mb-14">
+                <h2 class="text-4xl text-triumph-gold font-serif font-bold">骑士真实评价</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-900 p-6 rounded border border-amber-600/20 hover-scale">
+                    <div class="text-triumph-gold">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="mt-4 text-gray-300 italic">
+                        入手凯旋T120之后彻底爱上复古机车，颜值超高，骑行质感一流，日常出行回头率拉满。
+                    </p>
+                    <div class="mt-5 flex items-center gap-3">
+                        <img src="images/ava1.jpg" class="w-11 h-11 rounded-full">
+                        <div>
+                            <div class="text-white">老机车迷</div>
+                            <div class="text-sm text-gray-500">T120车主</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-900 p-6 rounded border border-amber-600/20 hover-scale">
+                    <div class="text-triumph-gold">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="mt-4 text-gray-300 italic">
+                        攀爬者通过性很强，城市通勤、短途摩旅都很合适，外观硬朗非常有男人味。
+                    </p>
+                    <div class="mt-5 flex items-center gap-3">
+                        <img src="images/ava2.jpg" class="w-11 h-11 rounded-full">
+                        <div>
+                            <div class="text-white">荒野骑士</div>
+                            <div class="text-sm text-gray-500">攀爬者车主</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-900 p-6 rounded border border-amber-600/20 hover-scale">
+                    <div class="text-triumph-gold">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <p class="mt-4 text-gray-300 italic">
+                        900cc排量刚刚好，新手也能轻松驾驭，复古外观搭配现代配置性价比很高。
+                    </p>
+                    <div class="mt-5 flex items-center gap-3">
+                        <img src="images/ava3.jpg" class="w-11 h-11 rounded-full">
+                        <div>
+                            <div class="text-white">复古爱好者</div>
+                            <div class="text-sm text-gray-500">Speed Twin车主</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-black py-10 border-t border-amber-700/30">
+        <div class="container mx-auto px-5 text-center">
+            <h3 class="text-2xl text-triumph-gold font-serif font-bold">TRIUMPH 凯旋机车</h3>
+            <p class="mt-3 text-gray-500">传承百年英伦复古 · 追逐自由骑行梦想</p>
+            <div class="mt-5 flex justify-center gap-5 text-xl text-gray-400">
+                <a href="#" class="hover:text-triumph-gold"><i class="fa-brands fa-weibo"></i></a>
+                <a href="#" class="hover:text-triumph-gold"><i class="fa-brands fa-weixin"></i></a>
+                <a href="#" class="hover:text-triumph-gold"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#" class="hover:text-triumph-gold"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <p class="mt-6 text-sm text-gray-600">©2026 凯旋复古摩托车宣传网页 版权所有</p>
+        </div>
+    </footer>
+</body>
+</html>
