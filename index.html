@@ -44,7 +44,19 @@
                 <a href="#detail" class="hover:text-triumph-gold">机车细节</a>
                 <a href="#comment" class="hover:text-triumph-gold">车友评价</a>
             </nav>
-            <i class="fa-solid fa-bars text-xl text-triumph-gold md:hidden"></i>
+            <!-- 移动端按钮 加了ID -->
+            <button id="menuBtn" class="md:hidden text-xl text-triumph-gold">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- 移动端菜单 自动隐藏 -->
+        <div id="mobileMenu" class="hidden md:hidden bg-black/95 text-center py-4 border-t border-amber-600/30">
+            <a href="#home" class="block py-3 hover:text-triumph-gold">首页</a>
+            <a href="#car" class="block py-3 hover:text-triumph-gold">车型展示</a>
+            <a href="#about" class="block py-3 hover:text-triumph-gold">品牌介绍</a>
+            <a href="#detail" class="block py-3 hover:text-triumph-gold">机车细节</a>
+            <a href="#comment" class="block py-3 hover:text-triumph-gold">车友评价</a>
         </div>
     </header>
 
@@ -257,5 +269,22 @@
             <p class="mt-6 text-sm text-gray-600">©2026 凯旋复古摩托车宣传网页 版权所有</p>
         </div>
     </footer>
+
+<!-- 移动端菜单点击功能 -->
+<script>
+const menuBtn = document.getElementById('menuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+});
+
+mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+    });
+});
+</script>
+
 </body>
 </html>
